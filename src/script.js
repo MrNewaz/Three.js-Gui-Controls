@@ -42,9 +42,14 @@ scene.add(mesh)
 // gui.add(mesh.position, 'x', -3, 3, 0.01)
 // gui.add(mesh.position, 'z', -3, 3, 0.01)
 
-gui.add(mesh.position, 'x').min(-3).max(3).step(0.01)
-gui.add(mesh.position, 'y').min(-3).max(3).step(0.01)
-gui.add(mesh.position, 'z').min(-3).max(3).step(0.01)
+gui.add(mesh.position, 'x').min(-3).max(3).step(0.01).name('Move X')
+gui.add(mesh.position, 'y').min(-3).max(3).step(0.01).name('Move Y')
+gui.add(mesh.position, 'z').min(-3).max(3).step(0.01).name('Move Z')
+gui.add(mesh.rotation, 'x').min(-3).max(3).step(0.01).name('Rotate X')
+gui.add(mesh.rotation, 'y').min(-3).max(3).step(0.01).name('Rotate Y')
+gui.add(mesh.rotation, 'z').min(-3).max(3).step(0.01).name('Rotate Z')
+
+// gui.add(mesh.position, 'z').min(-3).max(3).step(0.01)
 
 gui.add(parameters, 'spin')
 
